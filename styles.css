@@ -1,0 +1,133 @@
+body {
+    background: #ffffff;
+    font-family: ulp-font, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+}
+
+.login-container {
+    width: 400px; /* 固定容器宽度 */
+    margin: 0 auto; /* 水平居中 */
+    padding: 20px; /* 内边距 */
+    text-align: center; /* 文字居中 */
+}
+
+.header {
+    text-align: center; /* 讓圖片置中 */
+}
+
+.header img {
+    max-width: 95px; /* 設置最大寬度 */
+    height: auto; /* 讓高度自動調整，保持比例 */
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+
+h2 {
+    font-size: 30px; /* 设置字体大小为 24 像素 */
+    margin-bottom: 30px; /* 添加下边距 */
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; /* 将子元素垂直排列 */
+    align-items: center; /* 在主轴上居中对齐 */
+    margin-bottom: 10px; /* 下边距 */
+}
+
+input[type="email"], .continue-button {
+    width: 80%; /* 和<hr>元素宽度相同 */
+    height: 50px; /* 输入框和按钮高度 */
+    line-height: 40px; /* 行高 */
+    padding: 0 10px; /* 左右内边距 */
+    border: 1px solid black; /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    box-sizing: border-box; /* 盒模型 */
+    margin-bottom: 20px; /* 下边距 */
+}
+
+.continue-button {
+    background-color: #10a37f; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    border: 1px solid #10a37f; /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针 */
+    transition: background-color 0.3s; /* 过渡效果 */
+}
+
+.continue-button:hover {
+    filter: brightness(95%);/* 悬停时的背景颜色 */
+}
+.signup-link {
+    font-size: 14px; /* 自定義字體大小 */
+}
+
+.signup-link a {
+    color: #10a37f; /* 超链接颜色 */
+    text-decoration: none;
+}
+
+hr {
+    border: none; /* 去除边框 */
+    border-top: 1px solid #ccc; /* 添加顶部边框 */
+    width: 80%; /* 宽度100% */
+    margin: 20px auto; /* 上下间距 */
+}
+
+hr::before {
+    content: "或"; /* 添加内容 */
+    display: inline-block; /* 内联块元素 */
+    background-color: #fff; /* 背景颜色 */
+    position: relative; /* 相对定位 */
+    top: -11px; /* 上方偏移量 */
+    padding: 0 10px; /* 左右内边距 */
+    color: #999; /* 文字颜色 */
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-buttons button {
+    display: flex; /* 使用 Flexbox 進行排列 */
+    align-items: center; /* 垂直居中對齊 */
+    justify-content: left; /* 水平居中對齊 */
+    width: 80%; /* 和<hr>元素宽度相同 */
+    height: 50px; /* 按钮高度 */
+    line-height: 40px; /* 行高 */
+    margin-bottom: 10px; /* 下边距 */
+    border: 1px solid black; /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针 */
+    background-color: white; /* 背景颜色透明 */
+    transition: background-color 0.3s; /* 过渡效果 */
+}
+
+.social-buttons button img {
+    margin-right: 15px; /* 圖片與文本之間的間距 */
+    max-width: 20px;
+}
+.social-buttons button:hover {
+    background-color: #f2f2f2; /* 悬停时的背景颜色 */
+}
+.continue-google {
+    font-size: 15px; /* 自定義字體大小 */
+}
+
+.continue-microsoft {
+    font-size: 15px; /* 自定義字體大小 */
+}
+
+.continue-apple {
+    font-size: 15px; /* 自定義字體大小 */
+}
+
+.link {
+    margin-top: 150px; /* 下边距 */
+}
+
+.link a {
+    color: #10a37f; /* 超链接颜色 */
+    text-decoration: none;
+}
