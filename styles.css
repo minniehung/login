@@ -15,9 +15,9 @@ body {
 }
 
 .header img {
-    max-width: 95px; /* 設置最大寬度 */
+    max-width: 190px; /* 設置最大寬度 */
     height: auto; /* 讓高度自動調整，保持比例 */
-    margin-top: 30px;
+    margin-top: 55px;
     margin-bottom: 100px;
 }
 
@@ -39,7 +39,7 @@ input[type="email"], .continue-button {
     height: 50px; /* 输入框和按钮高度 */
     line-height: 40px; /* 行高 */
     padding: 0 10px; /* 左右内边距 */
-    border: 1px solid black; /* 边框 */
+    border: 1px solid #999; /* 边框 */
     border-radius: 5px; /* 圆角 */
     box-sizing: border-box; /* 盒模型 */
     margin-bottom: 20px; /* 下边距 */
@@ -74,7 +74,7 @@ hr {
 }
 
 hr::before {
-    content: "或"; /* 添加内容 */
+    content: "或者"; /* 添加内容 */
     display: inline-block; /* 内联块元素 */
     background-color: #fff; /* 背景颜色 */
     position: relative; /* 相对定位 */
@@ -97,7 +97,7 @@ hr::before {
     height: 50px; /* 按钮高度 */
     line-height: 40px; /* 行高 */
     margin-bottom: 10px; /* 下边距 */
-    border: 1px solid black; /* 边框 */
+    border: 1px solid #999; /* 边框 */
     border-radius: 5px; /* 圆角 */
     cursor: pointer; /* 鼠标指针 */
     background-color: white; /* 背景颜色透明 */
@@ -105,6 +105,7 @@ hr::before {
 }
 
 .social-buttons button img {
+    margin-left:15px;
     margin-right: 15px; /* 圖片與文本之間的間距 */
     max-width: 20px;
 }
