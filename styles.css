@@ -1,86 +1,105 @@
+/* 基本樣式 */
 body {
     background: #ffffff;
     font-family: ulp-font, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
 }
 
 .login-container {
-    width: 400px; /* 固定容器宽度 */
-    margin: 0 auto; /* 水平居中 */
-    padding: 20px; /* 内边距 */
-    text-align: center; /* 文字居中 */
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
 .header {
-    text-align: center; /* 讓圖片置中 */
+    text-align: center;
 }
 
 .header img {
-    max-width: 190px; /* 設置最大寬度 */
-    height: auto; /* 讓高度自動調整，保持比例 */
+    max-width: 190px;
+    height: auto;
     margin-top: 55px;
     margin-bottom: 100px;
 }
 
-
 h2 {
-    font-size: 30px; /* 设置字体大小为 24 像素 */
-    margin-bottom: 30px; /* 添加下边距 */
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 
-.input-container {
+.form-group {
     display: flex;
-    flex-direction: column; /* 将子元素垂直排列 */
-    align-items: center; /* 在主轴上居中对齐 */
-    margin-bottom: 10px; /* 下边距 */
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-input[type="email"], .continue-button {
-    width: 80%; /* 和<hr>元素宽度相同 */
-    height: 50px; /* 输入框和按钮高度 */
-    line-height: 40px; /* 行高 */
-    padding: 0 10px; /* 左右内边距 */
-    border: 1px solid #999; /* 边框 */
-    border-radius: 5px; /* 圆角 */
-    box-sizing: border-box; /* 盒模型 */
-    margin-bottom: 20px; /* 下边距 */
+input[type="email"],
+.continue-button {
+    width: calc(80% - 20px); /* 調整寬度 */
+    height: 50px;
+    line-height: 40px;
+    padding: 0 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-indent: 10px;
+    transition: border-color 0.3s, background-color 0.3s; /* 添加背景色過渡效果 */
 }
 
 .continue-button {
-    background-color: #10a37f; /* 背景颜色 */
-    color: white; /* 文字颜色 */
-    border: 1px solid #10a37f; /* 边框 */
-    border-radius: 5px; /* 圆角 */
-    cursor: pointer; /* 鼠标指针 */
-    transition: background-color 0.3s; /* 过渡效果 */
+    background-color: #10a37f;
+    color: white;
+    border: 1px solid #10a37f;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .continue-button:hover {
-    filter: brightness(95%);/* 悬停时的背景颜色 */
+    filter: brightness(95%);
 }
+
 .signup-link {
-    font-size: 14px; /* 自定義字體大小 */
+    font-size: 14px;
+    margin-bottom: 0px;
 }
 
 .signup-link a {
-    color: #10a37f; /* 超链接颜色 */
+    color: #10a37f;
     text-decoration: none;
 }
 
-hr {
-    border: none; /* 去除边框 */
-    border-top: 1px solid #ccc; /* 添加顶部边框 */
-    width: 80%; /* 宽度100% */
-    margin: 20px auto; /* 上下间距 */
+.or-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-hr::before {
-    content: "或者"; /* 添加内容 */
-    display: inline-block; /* 内联块元素 */
-    background-color: #fff; /* 背景颜色 */
-    position: relative; /* 相对定位 */
-    top: -11px; /* 上方偏移量 */
-    padding: 0 10px; /* 左右内边距 */
-    color: #999; /* 文字颜色 */
+.or-separator::before,
+.or-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.or-separator:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.or-separator:not(:empty)::after {
+    margin-left: .25em;
+}
+
+.or-separator span {
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 0 10px;
 }
 
 .social-buttons {
@@ -90,45 +109,89 @@ hr::before {
 }
 
 .social-buttons button {
-    display: flex; /* 使用 Flexbox 進行排列 */
-    align-items: center; /* 垂直居中對齊 */
-    justify-content: left; /* 水平居中對齊 */
-    width: 80%; /* 和<hr>元素宽度相同 */
-    height: 50px; /* 按钮高度 */
-    line-height: 40px; /* 行高 */
-    margin-bottom: 10px; /* 下边距 */
-    border: 1px solid #999; /* 边框 */
-    border-radius: 5px; /* 圆角 */
-    cursor: pointer; /* 鼠标指针 */
-    background-color: white; /* 背景颜色透明 */
-    transition: background-color 0.3s; /* 过渡效果 */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: calc(80% - 20px); /* 調整寬度 */
+    height: 50px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s;
 }
 
 .social-buttons button img {
-    margin-left:15px;
-    margin-right: 15px; /* 圖片與文本之間的間距 */
+    margin-left: 15px;
+    margin-right: 15px;
     max-width: 20px;
 }
+
 .social-buttons button:hover {
-    background-color: #f2f2f2; /* 悬停时的背景颜色 */
-}
-.continue-google {
-    font-size: 15px; /* 自定義字體大小 */
+    background-color: #f2f2f2;
 }
 
-.continue-microsoft {
-    font-size: 15px; /* 自定義字體大小 */
-}
-
+.continue-google,
+.continue-microsoft,
 .continue-apple {
-    font-size: 15px; /* 自定義字體大小 */
+    font-size: 15px;
 }
 
 .link {
-    margin-top: 150px; /* 下边距 */
+    margin-top: 150px;
 }
 
 .link a {
-    color: #10a37f; /* 超链接颜色 */
+    color: #10a37f;
     text-decoration: none;
+}
+
+/* 您提出的更改 */
+.input-container {
+    position: relative;
+    width: calc(80% - 20px); /* 調整寬度 */
+}
+
+.input-container input {
+    width: 100%;
+    height: 50px; /* 將高度設置為50px，與其他按鈕一樣 */
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* 添加邊框顏色過渡效果 */
+}
+
+.input-container input:focus,
+.input-container input:valid {
+    border-color: #7ed6bf; /* 修改為淺綠色 */
+    border-width: 1px; /* 修復邊框的粗細問題 */
+}
+
+.input-container input:focus {
+    border-color: #7ed6bf !important; /* 聚焦時邊框顏色變為淺綠色 */
+}
+
+.input-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #000000;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+    padding: 0 5px;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.input-container input:focus + .input-label,
+.input-container input:valid + .input-label {
+    top: -10px;
+    font-size: 14px; /* 增加字體大小 */
+    background-color: #ffffff;
+    padding: 0 5px;
+    border-radius: 3px;
+    color: #10a37f; /* 聚焦後顏色變成和按鈕一樣的顏色 */
 }
