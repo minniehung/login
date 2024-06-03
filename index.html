@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- 引入 CSS 文件 -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="header">
@@ -12,21 +12,16 @@
 </div>
 <div class="login-container">
     <h2>歡迎回來</h2>
-    <form action="login.php" method="post"> <!-- 表单提交至 login.php -->
+    <form action="login.php" method="post">
         <div class="form-group">
-            <div class="input-container">
-                <input type="email" id="email" name="email" required>
-                <label for="email" class="input-label">電子郵件地址</label>
-            </div>
+            <input type="email" id="email" name="email" placeholder=" 電子郵件地址" required>
             <button type="submit" class="continue-button">繼續</button>
         </div>
     </form>
     <div class="signup-link">
-        <p>沒有帳戶? <a href="#" class="green-link">註冊</a></p>
+        <p>沒有帳戶 ? <a href="#" class="green-link">註冊</a></p>
     </div>
-    <div class="or-separator">
-        <span>或</span>
-    </div>
+    <hr>
     <div class="social-buttons">
         <button class="continue-google">
             <img src="imgs/img2.webp" alt="img2">
@@ -43,10 +38,11 @@
     </div>
     <div class="link">
         <p>
-            <a href="#" class="green-link">使用條款</a> |
+            <a href="#" class="green-link">使用條款</a>|
             <a href="#" class="green-link">隱私政策</a>
         </p>
     </div>
 </div>
+
 </body>
 </html>

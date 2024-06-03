@@ -1,105 +1,86 @@
-/* 基本樣式 */
 body {
     background: #ffffff;
     font-family: ulp-font, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
 }
 
 .login-container {
-    width: 400px;
-    margin: 0 auto;
+    width: 400px;  /* 固定寬度 */
+    margin: 0 auto; /* 水平置中 */
     padding: 20px;
-    text-align: center;
+    text-align: center; /* 文字置中 */
 }
 
 .header {
-    text-align: center;
+    text-align: center; /* 將chatgpt的logo置中 */
 }
 
 .header img {
-    max-width: 190px;
+    max-width: 190px; /* 設置logo大小 */
     height: auto;
     margin-top: 55px;
     margin-bottom: 100px;
 }
 
+
 h2 {
-    font-size: 30px;
+    font-size: 30px; /* 設定歡迎回來字體大小 */
     margin-bottom: 30px;
 }
 
-.form-group {
+.input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-input[type="email"],
-.continue-button {
-    width: calc(80% - 20px); /* 調整寬度 */
-    height: 50px;
+input[type="email"], .continue-button {
+    width: 80%; /* 輸入框寬度 */
+    height: 50px; /* 輸入框高度 */
     line-height: 40px;
     padding: 0 10px;
-    border: 1px solid #999;
-    border-radius: 5px;
+    border: 1px solid #999; /* 邊框 */
+    border-radius: 5px; /* 圆角 */
     box-sizing: border-box;
     margin-bottom: 20px;
-    font-size: 16px;
-    text-indent: 10px;
-    transition: border-color 0.3s, background-color 0.3s; /* 添加背景色過渡效果 */
 }
 
 .continue-button {
-    background-color: #10a37f;
-    color: white;
-    border: 1px solid #10a37f;
-    border-radius: 5px;
+    background-color: #10a37f; /* 按鈕背景顏色 */
+    color: white; /* 文字颜色 */
+    border: 1px solid #10a37f; /* 邊框 */
+    border-radius: 5px; /* 圓角 */
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .continue-button:hover {
-    filter: brightness(95%);
+    filter: brightness(95%);/* 停留時的背景顏色 */
 }
-
 .signup-link {
     font-size: 14px;
-    margin-bottom: 0px;
 }
 
 .signup-link a {
-    color: #10a37f;
-    text-decoration: none;
+    color: #10a37f; /* 超連結的顏色 */
+    text-decoration: none; /* 不要有超連結的底線 */
 }
 
-.or-separator {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto;
 }
 
-.or-separator::before,
-.or-separator::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid #ccc;
-}
-
-.or-separator:not(:empty)::before {
-    margin-right: .25em;
-}
-
-.or-separator:not(:empty)::after {
-    margin-left: .25em;
-}
-
-.or-separator span {
-    white-space: nowrap;
-    font-size: 12px;
+hr::before {
+    content: "或者";
+    display: inline-block;
+    background-color: #fff;
+    position: relative;
+    top: -11px;
     padding: 0 10px;
+    color: #999;
 }
 
 .social-buttons {
@@ -109,34 +90,38 @@ input[type="email"],
 }
 
 .social-buttons button {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    width: calc(80% - 20px); /* 調整寬度 */
-    height: 50px;
+    display: flex; /* 使用 Flexbox 進行排列 */
+    align-items: center; /* 垂直置中 */
+    justify-content: left; /* 水平置中 */
+    width: 80%; /* 按鈕寬度和<hr>相同 */
+    height: 50px; /* 按鈕寬度 */
     line-height: 40px;
     margin-bottom: 10px;
-    border: 1px solid #999;
-    border-radius: 5px;
+    border: 1px solid #999; /* 邊框 */
+    border-radius: 5px; /* 圓角 */
     cursor: pointer;
     background-color: white;
     transition: background-color 0.3s;
 }
 
 .social-buttons button img {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left:15px;
+    margin-right: 15px; /* 圖片與文本之間的間距 */
     max-width: 20px;
 }
-
 .social-buttons button:hover {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* 停留時的背景顏色 */
+}
+.continue-google {
+    font-size: 15px; /* 字體大小 */
 }
 
-.continue-google,
-.continue-microsoft,
+.continue-microsoft {
+    font-size: 15px; /* 字體大小 */
+}
+
 .continue-apple {
-    font-size: 15px;
+    font-size: 15px; /* 字體大小 */
 }
 
 .link {
@@ -144,54 +129,6 @@ input[type="email"],
 }
 
 .link a {
-    color: #10a37f;
-    text-decoration: none;
-}
-
-/* 您提出的更改 */
-.input-container {
-    position: relative;
-    width: calc(80% - 20px); /* 調整寬度 */
-}
-
-.input-container input {
-    width: 100%;
-    height: 50px; /* 將高度設置為50px，與其他按鈕一樣 */
-    padding: 10px;
-    border: 1px solid #999;
-    border-radius: 5px;
-    box-sizing: border-box;
-    transition: border-color 0.3s; /* 添加邊框顏色過渡效果 */
-}
-
-.input-container input:focus,
-.input-container input:valid {
-    border-color: #7ed6bf; /* 修改為淺綠色 */
-    border-width: 1px; /* 修復邊框的粗細問題 */
-}
-
-.input-container input:focus {
-    border-color: #7ed6bf !important; /* 聚焦時邊框顏色變為淺綠色 */
-}
-
-.input-label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #000000;
-    pointer-events: none;
-    transition: all 0.3s ease-out;
-    padding: 0 5px;
-    border-radius: 3px;
-    background-color: #ffffff;
-}
-
-.input-container input:focus + .input-label,
-.input-container input:valid + .input-label {
-    top: -10px;
-    font-size: 14px; /* 增加字體大小 */
-    background-color: #ffffff;
-    padding: 0 5px;
-    border-radius: 3px;
-    color: #10a37f; /* 聚焦後顏色變成和按鈕一樣的顏色 */
+    color: #10a37f; /* 超連結顏色 */
+    text-decoration: none; /*去除超連結的底線*/
 }
